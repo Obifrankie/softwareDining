@@ -16,6 +16,10 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
+app.get('/', (req, res) => {
+  res.send('APP IS RUNNING.');
+}); 
+
 const CONNECTION_URL = 'mongodb://softwarediningdb:4sVyZGPH1xk68SnhoZXNkN55Jq5DAISUrN8FFFxjkH4Yr72O2wjE770PNxZBtMdJkp1BHwqRzpIgGFRANQSEOg==@softwarediningdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@softwarediningdb@';
 const PORT = process.env.PORT|| 5000;
 
